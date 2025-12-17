@@ -164,7 +164,24 @@ footer{
 }
 </style>
 </head>
+<body>
 
+  <h2>Place Your Order</h2>
+
+  <form action="https://formsubmit.co/princekymar11899@gmail.com" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required><br><br>
+    <input type="tel" name="phone" placeholder="Phone Number" required><br><br>
+    <input type="text" name="quantity" placeholder="Bottle Quantity" required><br><br>
+    <textarea name="address" placeholder="Delivery Address" required></textarea><br><br>
+
+    <!-- optional hidden fields -->
+    <input type="hidden" name="_subject" value="New AQUA Order">
+    <input type="hidden" name="_captcha" value="false">
+
+    <button type="submit">Submit Order</button>
+  </form>
+
+</body>
 <body>
 
 <header>
@@ -272,3 +289,4 @@ footer{
 
 </body>
 </html>
+
