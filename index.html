@@ -15,30 +15,27 @@ body{
   background:#f5f9fc;
   color:#333;
 }
+
+/* HEADER */
 header{
   background:linear-gradient(135deg,#0077b6,#00b4d8);
   color:white;
-  padding:50px 20px;
+  padding:55px 20px;
   text-align:center;
 }
-header h1{
-  font-size:42px;
-  margin-bottom:10px;
-}
-header p{
-  font-size:18px;
-  margin-bottom:20px;
-}
+header h1{font-size:42px;margin-bottom:8px;}
+header p{font-size:18px;margin-bottom:25px;}
 header button{
-  margin:5px;
-  padding:12px 22px;
+  margin:6px;
+  padding:12px 26px;
   border:none;
   border-radius:25px;
   background:white;
   color:#0077b6;
   font-weight:bold;
-  cursor:pointer;
 }
+
+/* NAV */
 nav{
   background:white;
   padding:15px;
@@ -51,15 +48,16 @@ nav a{
   color:#0077b6;
   font-weight:bold;
 }
+
+/* SECTIONS */
 section{
-  padding:50px 20px;
+  padding:55px 20px;
   max-width:1100px;
   margin:auto;
 }
-h2{
-  color:#0077b6;
-  margin-bottom:15px;
-}
+h2{color:#0077b6;margin-bottom:15px;}
+
+/* PRODUCT CARDS */
 .cards{
   display:flex;
   gap:20px;
@@ -67,54 +65,102 @@ h2{
 }
 .card{
   background:white;
-  padding:25px;
-  border-radius:10px;
+  padding:28px;
+  border-radius:14px;
   flex:1;
   min-width:250px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+  box-shadow:0 6px 18px rgba(0,0,0,0.1);
+  text-align:center;
 }
+
+/* PURE CSS BOTTLE */
+.bottle{
+  width:60px;
+  height:120px;
+  margin:0 auto 15px;
+  background:linear-gradient(180deg,#e3f2fd,#ffffff);
+  border-radius:18px 18px 10px 10px;
+  border:2px solid #b6dbf2;
+  position:relative;
+}
+.bottle::before{
+  content:"";
+  position:absolute;
+  top:-18px;
+  left:50%;
+  transform:translateX(-50%);
+  width:26px;
+  height:18px;
+  background:#b6dbf2;
+  border-radius:6px 6px 0 0;
+}
+
+/* FEATURES */
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:20px;
+  margin-top:30px;
+}
+.feature{
+  background:white;
+  padding:20px;
+  border-radius:12px;
+  text-align:center;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* FORM */
 form input, form textarea{
   width:100%;
   padding:12px;
   margin:8px 0;
-  border-radius:5px;
+  border-radius:6px;
   border:1px solid #ccc;
 }
 form button{
   background:#0077b6;
   color:white;
   border:none;
-  padding:12px 25px;
-  border-radius:5px;
-  cursor:pointer;
+  padding:13px 28px;
+  border-radius:6px;
+  font-size:16px;
 }
+
+/* FOOTER */
 footer{
   background:#003049;
   color:white;
   padding:25px;
   text-align:center;
+  padding-bottom:140px;
 }
-.whatsapp{
+
+/* FLOAT ICON BUTTONS */
+.float-btn{
   position:fixed;
-  bottom:20px;
   right:20px;
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 4px 12px rgba(0,0,0,0.35);
+  z-index:9999;
+}
+.float-btn svg{
+  width:28px;
+  height:28px;
+  fill:white;
+}
+.float-whatsapp{
+  bottom:30px;
   background:#25D366;
-  color:white;
-  padding:15px 18px;
-  border-radius:50%;
-  font-size:18px;
-  text-decoration:none;
 }
-.call{
-  position:fixed;
-  bottom:90px;
-  right:20px;
+.float-call{
+  bottom:100px;
   background:#0077b6;
-  color:white;
-  padding:15px 18px;
-  border-radius:50%;
-  font-size:18px;
-  text-decoration:none;
 }
 </style>
 </head>
@@ -140,37 +186,37 @@ footer{
   <h2>Premium Clear Bottled Water in Kashipur</h2>
   <p>
     AQUA provides crystal-clear bottled drinking water with a clean, transparent bottle design
-    inspired by premium clear water brands. Our bottles reflect purity, hygiene, and luxury,
-    making them perfect for hotels, cafes, weddings, and corporate events.
+    inspired by premium clear water brands.
   </p>
+
+  <div class="features">
+    <div class="feature">RO + UV Purified</div>
+    <div class="feature">FSSAI Approved</div>
+    <div class="feature">Hygienic Packaging</div>
+    <div class="feature">Hotel Grade Quality</div>
+  </div>
 </section>
 
 <section id="products">
   <h2>Our Products</h2>
+
   <div class="cards">
     <div class="card">
+      <div class="bottle"></div>
       <h3>250 ML Bottle</h3>
-      <p>
-        Premium clear PET bottle with a transparent, minimal look similar to top clear brands.
-        Ideal for hotels, meetings, and luxury events.
-      </p>
-      <p><em>Placeholder image – clear bottle style</em></p>
+      <p>Ideal for hotels, meetings, and luxury events.</p>
     </div>
+
     <div class="card">
+      <div class="bottle"></div>
       <h3>500 ML Bottle</h3>
-      <p>
-        Crystal-clear bottle designed to enhance table presentation and brand value.
-        Suitable for cafes, conferences, and daily hospitality use.
-      </p>
-      <p><em>Placeholder image – clear bottle style</em></p>
+      <p>Perfect for cafes, conferences, and daily use.</p>
     </div>
+
     <div class="card">
+      <div class="bottle"></div>
       <h3>1 L Bottle</h3>
-      <p>
-        Clean, transparent bottle with strong sealing and hygienic finish.
-        Perfect for dining tables, rooms, and large gatherings.
-      </p>
-      <p><em>Placeholder image – clear bottle style</em></p>
+      <p>Best for hotels, rooms, and bulk orders.</p>
     </div>
   </div>
 </section>
@@ -178,8 +224,8 @@ footer{
 <section id="customization">
   <h2>Custom Branded Clear Bottles</h2>
   <p>
-    AQUA offers customized clear bottled water for hotels, cafes, weddings, and events.
-    Add your logo while maintaining a premium, transparent, luxury bottle appearance.
+    Get your hotel, cafe, or event logo printed on AQUA bottles
+    while maintaining a premium clear look.
   </p>
 </section>
 
@@ -190,8 +236,6 @@ footer{
     <input type="text" placeholder="Business / Hotel Name" required>
     <input type="tel" placeholder="Phone Number" required>
     <input type="text" placeholder="City">
-    <input type="file">
-    <input type="number" placeholder="Quantity Required">
     <textarea rows="4" placeholder="Additional Message"></textarea>
     <button type="submit">Submit Enquiry</button>
   </form>
@@ -200,12 +244,8 @@ footer{
 <section id="about">
   <h2>About AQUA</h2>
   <p>
-    AQUA was established to deliver safe, purified drinking water with a premium clear bottle design.
-    Inspired by luxury clear water brands, we focus on purity, trust, and modern aesthetics.
-  </p>
-  <p>
-    Our water is processed at our advanced water plant and is FSSAI approved, ensuring consistent
-    quality, hygiene, and safety for every bottle we supply.
+    AQUA delivers safe, purified drinking water with a premium clear bottle design.
+    Our plant is FSSAI approved ensuring hygiene and trust.
   </p>
 </section>
 
@@ -216,8 +256,19 @@ footer{
   <p>✉️ princekymar11899@gmail.com</p>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/918077882831" target="_blank">💬</a>
-<a class="call" href="tel:8077882831">📞</a>
+<!-- WhatsApp Icon -->
+<a href="https://wa.me/918077882831" class="float-btn float-whatsapp">
+  <svg viewBox="0 0 32 32">
+    <path d="M16 2C8.3 2 2 8.3 2 16c0 2.8.8 5.4 2.3 7.7L2 30l6.5-2.1C10.7 29.3 13.3 30 16 30c7.7 0 14-6.3 14-14S23.7 2 16 2z"/>
+  </svg>
+</a>
+
+<!-- Call Icon -->
+<a href="tel:8077882831" class="float-btn float-call">
+  <svg viewBox="0 0 24 24">
+    <path d="M6.6 10.8c1.5 3 4.6 5.1 7.6 6.2l2.5-2.5c.3-.3.8-.4 1.2-.2 1.3.5 2.7.8 4.1.8v4c-11 0-20-9-20-20h4c0 1.4.3 2.8.8 4.1.1.4 0 .9-.3 1.2l-2.2 2.4z"/>
+  </svg>
+</a>
 
 </body>
 </html>
